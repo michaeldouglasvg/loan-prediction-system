@@ -1,0 +1,84 @@
+body {
+ font-family: Arial, sans-serif;
+ font-size: 14px;
+}
+
+h1, h2 {
+ margin: .3rem 0;
+}
+
+table {
+ border-collapse: collapse;
+ margin: .2rem 0;
+ width: 100%;
+}
+
+table thead tr th{
+ font-size: 1.3rem;
+ font-weight: 600;
+ padding-left: .6rem;
+}
+
+th, td {
+ border: 1px solid #ddd;
+ padding: .2rem;
+ text-align: left;
+ padding-left: .6rem;
+}
+
+
+.Resultsrecommendation {
+ margin-top: .4rem;
+ padding: 20px;
+ border: 1px solid #ddd;
+ border-radius: 5px;
+}
+
+.Results {
+ margin-bottom: 20px;
+}
+
+.Details {
+ display: flex;
+ justify-content: space-between;
+}
+
+.sectionleftresults, .sectionrightrecommentation {
+ width: 48%;
+ border: 1px solid #ddd;
+ padding: 10px;
+ border-radius: 5px;
+}
+
+.sectionleftresults {
+ background-color: #e6ffe6;
+ margin-right: 2%;
+}
+
+.sectionrightrecommentation {
+ background-color: #ffcccc;
+ margin-left: 2%;
+}
+
+.sectionleftresults h2, .sectionrightrecommentation h2 {
+ margin: 10px 0;
+}
+
+.sectionleftresults p, .sectionrightrecommentation p {
+ margin: 5px 0;
+ line-height: 1.5;
+}
+
+.sectionleftresults p:last-child, .sectionrightrecommentation p:last-child {
+ margin-bottom: 0;
+}
+
+span.qualified {
+ color: green;
+ font-weight: bold;
+}
+
+span.not-qualified {
+ color: orangered;
+ font-weight: bold;
+}
