@@ -3,7 +3,7 @@ import { MainBodyDisplay, LoaneeFormData, Bodyloandefinition } from "../componen
 import { Button } from '../components/styled/Button.styled';
 import { FaEnvelope, FaPhone} from "react-icons/fa"
 import { ApplicantContext } from '../context/form-context';
-import { FaArrowLeft, FaDownload } from 'react-icons/fa';
+import { FaDownload } from 'react-icons/fa';
 import Subloader from '../components/universals/Subloader';
 import html2pdf from 'html2pdf.js';
 import AutoTyping from 'react-auto-typing'
