@@ -8,6 +8,64 @@ import Subloader from '../components/universals/Subloader';
 import html2pdf from 'html2pdf.js';
 import AutoTyping from 'react-auto-typing'
 import "./report.css";
+import styled from 'styled-components';
+
+
+const TableContainer = styled.div`
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background: ${({theme}) => theme.colors.body};
+    color:  ${({theme}) => theme.colors.color};
+  }
+
+  @media (max-width: 768px) {
+    min-height: 50vh;
+    th, td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 50vh;
+    table {
+      min-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    tr {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      display: block;
+      text-align: right;
+    }
+
+    th {
+      text-align: left;
+      background-color: transparent;
+      font-weight: bold;
+    }
+  }
+`;
 
 const Resultspage = () => {
   const { detailspage, applicardId, resetFileds, gender, maritalStatus, dependants, employed, loanamount, incomerate, credithistory, prediction } = useContext(ApplicantContext)
@@ -129,7 +187,6 @@ const Resultspage = () => {
       <LoaneeFormData>
       <div className='Header'>
         <div>
-         <FaArrowLeft size={20}/> 
          <Button onClick={() => {resetFileds()}} bg='orangered' clr='white'>Reaply Loan</Button>
         </div>
         <h1>Welcome, National ID {applicardId}.</h1>
@@ -143,29 +200,31 @@ const Resultspage = () => {
         <Bodyloandefinition>
           <div className='Applicantdetailsform'>
             <h1>Applicant Details</h1>
-            <table>
-              <tr>
-                <th>Applicant ID</th>
-                <th>Gender</th>
-                <th>Marital Status</th>
-                <th>Dependants</th>
-                <th>Employment</th>
-                <th>Loan Amount</th>
-                <th>Income</th>
-                <th>Credit History</th>
-              </tr>
-              
-              <tr>
-                <td>{applicardId}</td>
-                <td>{gender === "1" ? "Male" : "Female"}</td>
-                <td>{maritalStatus === "1" ? "Married" : "Unmarried"}</td>
-                <td>{dependants}</td>
-                <td>{employed === "1" ? "Yes" : "No"}</td>
-                <td>{loanamount}</td>
-                <td>{incomerate}</td>
-                <td>{credithistory === "1" ? "Yes" : "No"}</td>
-              </tr>
-            </table>
+            <TableContainer>
+              <table>
+                <tr>
+                  <th>Applicant ID</th>
+                  <th>Gender</th>
+                  <th>Marital Status</th>
+                  <th>Dependants</th>
+                  <th>Employment</th>
+                  <th>Loan Amount</th>
+                  <th>Income</th>
+                  <th>Credit History</th>
+                </tr>
+                
+                <tr>
+                  <td>{applicardId}</td>
+                  <td>{gender === "1" ? "Male" : "Female"}</td>
+                  <td>{maritalStatus === "1" ? "Married" : "Unmarried"}</td>
+                  <td>{dependants}</td>
+                  <td>{employed === "1" ? "Yes" : "No"}</td>
+                  <td>{loanamount}</td>
+                  <td>{incomerate}</td>
+                  <td>{credithistory === "1" ? "Yes" : "No"}</td>
+                </tr>
+              </table>
+            </TableContainer>
           </div>
 
           <div className='Resultsrecommendation'>
@@ -222,7 +281,11 @@ const Resultspage = () => {
       
       
       <div className='Copyright'>
-        <p>Copyright&copy;2023Gtechdevelopers.com || Contact developer: <FaEnvelope/>&nbsp;<FaPhone/></p>
+        <p>Copyright&copy;2023Gtechdevelopers.com</p>
+        <div style={{display: "flex", alignItems: "center", marginTop: "1rem auto"}}>
+         <p>Contact developer:</p>
+         <FaEnvelope/>&nbsp;<FaPhone/>
+        </div>
       </div>
      </LoaneeFormData>
    </MainBodyDisplay>}

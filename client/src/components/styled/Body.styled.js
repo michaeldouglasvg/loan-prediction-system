@@ -43,7 +43,7 @@ export const LoaneeFormData = styled.div`
   background: ${({theme}) => theme.colors.body};
   color:  ${({theme}) => theme.colors.color};
   box-shadow: 0 0 2px 1px rgba(0 ,0 ,0 ,.1);
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +53,7 @@ export const LoaneeFormData = styled.div`
   padding: 1rem 1rem;
   background: whitesmoke;
   color: grey;
-  font-size: 1.3rem;
+  font-size: 1rem;
  }
  & > div{
   display: flex;
@@ -61,7 +61,7 @@ export const LoaneeFormData = styled.div`
   color: grey;
   cursor: pointer;
   & p{
-   font-size: 1.3rem;
+   font-size: 1rem;
   }
  }
  }
@@ -248,13 +248,12 @@ export const Bodyloandefinition = styled.div`
   & h1{
    width: 100%;
    padding: .2rem .1rem;
-   font-size: 1.8rem;
+   font-size: 1.3rem;
    color: grey;
   }
 
   & table{
    width: 100%;
-   height: 80px;
    ovrflow-x: scroll;
    outline: 1px solid #cbcbcd;
    border-colapse: colapse;
@@ -264,7 +263,7 @@ export const Bodyloandefinition = styled.div`
      border-colapse: colapse;
      text-align: left;
      outline: 1px solid #cbcbcd;
-     padding-left: .4rem;
+     padding-left: .5rem;
     }
 
     & td{
@@ -279,12 +278,12 @@ export const Bodyloandefinition = styled.div`
 
 
  & .Resultsrecommendation{
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
   & h1{
    width: 100%;
    padding: .2rem .1rem;
-   font-size: 1.8rem;
+   font-size: 1.3rem;
    color: grey;
   }
 
@@ -292,7 +291,7 @@ export const Bodyloandefinition = styled.div`
    width: 100%;
    & p{
     padding: .2rem .1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: grey;
 
     & span{
