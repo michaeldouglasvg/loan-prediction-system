@@ -17,6 +17,10 @@ MODEL_PATH = os.path.join(BASE_DIR, "model", "loan_classifier.joblib")
 
 model = joblib.load(MODEL_PATH)
 
+@app.route("/")
+def home():
+    return "Flask App is running on Render!"
+
 @app.route('/api/applyloan', methods=['POST'])
 def apply_loan():
     user_data = request.get_json()
