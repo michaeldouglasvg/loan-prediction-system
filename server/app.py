@@ -17,7 +17,7 @@ MODEL_PATH = os.path.join(BASE_DIR, "model", "loan_classifier.joblib")
 
 model = joblib.load(MODEL_PATH)
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def home():
     return "Flask App is running on Render!"
 
@@ -68,4 +68,4 @@ def predict_loan_status():
 
 # Check and execute main function if it exists
 if __name__ == '__main__':
-    app.run(debug=True, port=3001)
+    app.run()
