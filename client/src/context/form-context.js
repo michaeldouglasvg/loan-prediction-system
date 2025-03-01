@@ -33,7 +33,7 @@ useEffect(() => {
 }, []);
 
 const fetchUserData = () => {
-  axios.get('http://localhost:3001/api/predict')
+  axios.get('https://loan-prediction-system-8z5m.onrender.com/api/predict')
     .then(response => {
       setPrediction(response.data.predictions[0]);
     })
@@ -100,7 +100,7 @@ const fetchUserData = () => {
   };
 
   try {
-    const res = await fetch("http://localhost:3001/api/applyloan", {
+    const res = await fetch("https://loan-prediction-system-8z5m.onrender.com/api/applyloan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
