@@ -5,13 +5,17 @@ import pandas as pd
 import joblib
 from sklearn.preprocessing import LabelEncoder
 import json
+import os
 
 # create an instance of the Flask class
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Loading trained model from the folder model
-model = joblib.load('model/loan_classifier.joblib')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model", "loan_classifier.joblib")
+
+model = joblib.load(MODEL_PATH)
 
 @app.route('/api/applyloan', methods=['POST'])
 def apply_loan():
