@@ -34,14 +34,13 @@ const TableContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    min-height: 50vh;
     th, td {
       padding: 8px;
       font-size: 14px;
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     min-height: 50vh;
     table {
       min-width: 100%;
